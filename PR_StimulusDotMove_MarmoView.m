@@ -1111,13 +1111,6 @@ classdef PR_StimulusDotMove_MarmoView < protocols.protocol
             % Store it in combinedTrials
             o.combinedTrials(o.trialNumber).stimTrace = stimTrace;
 
-            % If NOT in Manual Trials, Save Trial Data as Normal
-            subject = o.subjectName;  
-            savePath = 'C:\Users\Chris\OneDrive\Documents\MATLAB\Huk Lab\Data\FMA\TrialData';
-            dateStr = datestr(now, 'ddmmmyyyy');
-            timeStr = datestr(now, 'HHMM');
-            filename = sprintf('%s_%s_%s_Trial%d.mat', subject, dateStr, timeStr, o.trialNumber);
-            fullFilePath = fullfile(savePath, filename);
             
             if ~isempty(o.trialData)
                 trialData = o.trialData(o.trialNumber);
